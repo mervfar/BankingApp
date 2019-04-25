@@ -1,0 +1,58 @@
+<!--
+  Generated template for the HistoryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>İşlem Geçmişiniz</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div style="position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background-color:#3ac5fc;">
+    <ion-row>
+      <ion-col>
+        İşlem Tarihi
+      </ion-col>
+      <ion-col>
+        Açıklama
+      </ion-col>
+      <ion-col>
+        Giden Para
+      </ion-col>
+      <ion-col>
+        Gelen Para
+      </ion-col>
+    </ion-row>
+  </div>
+  <ion-grid>
+    <div *ngFor="let item of result" style="border: 2px solid red;margin-bottom:2px;">
+      <ion-row>
+        <ion-col>
+          {{item.islem_tarihi}}
+        </ion-col>
+        <ion-col>
+          {{item.aciklama}}
+        </ion-col>
+        <ion-col>
+          {{item.giden_para}}
+        </ion-col>
+        <ion-col>
+          {{item.gelen_para}}
+        </ion-col>
+      </ion-row>
+
+    </div>
+
+
+
+  </ion-grid>
+</ion-content>

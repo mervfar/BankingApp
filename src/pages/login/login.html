@@ -1,0 +1,14 @@
+<ion-content padding center text-center>
+  <ion-title>Oturum Aç</ion-title>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Kullanıcı Adı:</ion-label>
+      <ion-input type="text" [(ngModel)]="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Şifre:</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button full (click)="login_action();">Giriş</button>
+</ion-content>

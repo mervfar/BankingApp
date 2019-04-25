@@ -1,17 +1,27 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      Destek
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+  <ion-card>
+    <ion-card-header>
+
+      <ion-card-title>Şikayet Kaydı Oluştur</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content style="border:solid;">
+      <ion-input id="header" style="border-bottom:solid 1px green" placeholder="Şikayet Konusu" [(ngModel)]="header"
+        required="true"></ion-input>
+      <ion-item>
+        <ion-textarea id="body" placeholder="Buraya detaylarından bahsedebilirsiniz..." [(ngModel)]="body"
+          required="true">
+        </ion-textarea>
+      </ion-item>
+    </ion-card-content>
+    <button ion-button (click)="post_action();">Kaydet</button>
+  </ion-card>
 </ion-content>

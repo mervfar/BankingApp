@@ -1,17 +1,50 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>
+      Ana Sayfa
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="logout_action();">Çıkış &nbsp;
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
+<ion-content padding center text-center>
+  <ion-card>
+    <ion-item>
+      <ion-avatar item-start>
+        <ion-icon name="hand"></ion-icon>
+      </ion-avatar>
+      <h2>Hoşgeldin, {{result.adi}} </h2>
+      <p>Hesap Özetiniz</p>
+    </ion-item>
+  </ion-card>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <ion-card>
+    <ion-item>
+      <ion-avatar item-start>
+        <ion-icon name="logo-usd"></ion-icon>
+      </ion-avatar>
+      <h2>Mevcut Bakiye</h2>
+
+    </ion-item>
+    <ion-card-content>
+      <p><b>{{result.bakiye}} TL (Türk Lirası)</b></p>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-avatar item-start>
+        <ion-icon name="stopwatch"></ion-icon>
+      </ion-avatar>
+      <h2>Son İşleminiz</h2>
+
+    </ion-item>
+    <ion-card-content>
+      <p>kuallanıcı ID > {{logged_user_id}}</p>
+    </ion-card-content>
+  </ion-card>
+
+
 </ion-content>
